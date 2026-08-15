@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script>
+/* Homepage-only, once-per-session intro loader. Runs before anything else
+   so the decision (and the resulting no-scroll lock) is in place before
+   the loader markup below is even parsed — no flash on repeat visits. */
+(function () {
+  try {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!sessionStorage.getItem('avrLoaderShown')) {
+      sessionStorage.setItem('avrLoaderShown', '1');
+      if (!reduce) {
+        document.documentElement.classList.add('avr-show-loader');
+      }
+    }
+  } catch (e) { /* sessionStorage unavailable (e.g. privacy mode) — just skip the loader */ }
+})();
+</script>
+<title>AVR Estates | Premium Residential Plots in Kamalapuram</title>
+<meta name="description" content="AVR Estates offers premium residential plots at Vasantham Nagar, Kamalapuram, with DTCP and RERA approvals, 1200–2000 Sq.Ft plot options, 32-feet roads, drinking water, electricity, street lighting and security facilities.">
+<link rel="canonical" href="https://www.avrestates.in/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AVR Estates">
+<meta property="og:title" content="AVR Estates | Premium Residential Plots in Kamalapuram">
+<meta property="og:description" content="DTCP & RERA approved residential plots at Vasantham Nagar, Kamalapuram. 1200–2000 Sq.Ft options, 32-ft roads, water, electricity, street lighting and security.">
+<meta property="og:image" content="https://www.avrestates.in/images/og-image.jpg">
+<meta property="og:url" content="https://www.avrestates.in/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AVR Estates | Premium Residential Plots in Kamalapuram">
+<meta name="twitter:description" content="DTCP & RERA approved residential plots at Vasantham Nagar, Kamalapuram.">
+<meta name="twitter:image" content="https://www.avrestates.in/images/og-image.jpg">
+
+<link rel="icon" href="/images/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "AVR Estates",
+  "description": "AVR Estates offers premium DTCP and RERA approved residential plots at Vasantham Nagar, Kamalapuram.",
+  "telephone": ["+91 6383940823", "+91 8072518104", "+91 9842296971"],
+  "email": "avrestatesofficial@gmail.com",
+  "url": "https://www.avrestates.in/",
+  "image": "https://www.avrestates.in/images/og-image.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Koothanallur",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN"
+  },
+  "areaServed": "Kamalapuram, Koothanallur, Tamil Nadu"
+}
+</script>
+<link rel="preload" as="image" href="images/avr-logo-transparent.png">
+</head>
+<body>
+<div class="avr-loader" aria-hidden="true">
+  <div class="avr-loader-logo">
+    <span class="avr-loader-glow"></span>
+    <img src="images/avr-logo-transparent.png" alt="" width="640" height="532">
+    <span class="avr-loader-shine"></span>
+  </div>
+</div>
+<script>
+/* Removes the loader — and the scroll lock — at exactly 2000ms, and takes
+   the node out of the DOM entirely so it can never affect the page again.
+   No-op if the loader was skipped above (repeat visit / reduced motion). */
+(function () {
+  if (document.documentElement.classList.contains('avr-show-loader')) {
+    setTimeout(function () {
+      document.documentElement.classList.remove('avr-show-loader');
+      var el = document.querySelector('.avr-loader');
+      if (el && el.parentNode) el.parentNode.removeChild(el);
+    }, 2000);
+  }
+})();
+</script>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 005 5L14 13l5 2v4c0 1-.9 2-2 2C9.5 21 3 14.5 3 6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12 3a9 9 0 00-7.8 13.4L3 21l4.8-1.2A9 9 0 1012 3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8.6 8.6c.3-.7 1-.7 1.3-.1l.5 1c.2.4.1.8-.1 1.1l-.4.5c-.1.2-.1.4 0 .6.5 1 1.3 1.8 2.3 2.3.2.1.4.1.6 0l.5-.4c.3-.2.7-.3 1.1-.1l1 .5c.6.3.6 1-.1 1.3-.6.3-1.3.5-2 .3-2.3-.5-4.5-2.7-5-5-.2-.7 0-1.4.3-2z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.2 8.5-7 10-3.8-1.5-7-5-7-10V6l7-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.2 8.5-7 10-3.8-1.5-7-5-7-10V6l7-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="11.5" r="1.3" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-road" viewBox="0 0 24 24"><path d="M9 3L5 21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 3l4 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 3v3M12 9.5v3M12 16v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-water" viewBox="0 0 24 24"><path d="M12 3s6 6.8 6 11a6 6 0 11-12 0c0-4.2 6-11 6-11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lamp" viewBox="0 0 24 24"><path d="M12 2v3M8 5h8l-1.5 6h-5L8 5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 11v7M9 21h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 9v3M11 9v3M15 9v3M19 9v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="17" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 14.2a4.8 4.8 0 016.3 4.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9a1 1 0 001 1h10a1 1 0 001-1v-9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 21v-7h2.5l.5-3H14V9c0-.9.3-1.5 1.6-1.5H17V5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9V11H8.5v3H11v7h3z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7.6" cy="8" r="1.1" fill="currentColor" stroke="none"/><path d="M7.6 11v6.5M11 11v6.5M11 13.5c0-1.6 1-2.7 2.4-2.7 1.6 0 2.4 1 2.4 2.9v3.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15 9l-2 5-5 2 2-5 5-2z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13.5" y="3.5" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3.5" y="13.5" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13.5" y="13.5" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-diamond" viewBox="0 0 24 24"><path d="M6 3h12l3 6-9 12L3 9l3-6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 9h18M9 3l3 6 3-6M9 3l-3 6M15 3l3 6" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2.5h7L17 8h3a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="images/avr-logo.png" alt="AVR Estates logo">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="vasantham-nagar.html">Vasantham Nagar</a>
+      <a href="amenities.html">Amenities</a>
+      <a href="location.html">Location</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+916383940823" class="nav-call"><svg><use href="#i-phone"/></svg> +91 63839 40823</a>
+      <a href="vasantham-nagar.html#enquiry" class="btn btn-gold btn-sm">Enquire Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero bg-navy-gradient blueprint-bg">
+  <div class="container hero-grid">
+    <div class="reveal is-visible">
+      <div class="hero-badge"><svg><use href="#i-shield-check"/></svg> DTCP &amp; RERA Approved Layout</div>
+      <h1>Your Property.<br><em>Our Priority.</em></h1>
+      <p class="hero-sub">AVR Estates develops premium, well-documented residential plots designed for families who value clarity, quality infrastructure and long-term worth — starting with Vasantham Nagar, Kamalapuram.</p>
+      <div class="hero-actions">
+        <a href="vasantham-nagar.html#enquiry" class="btn btn-gold">Enquire Now <svg><use href="#i-arrow-right"/></svg></a>
+        <a href="tel:+916383940823" class="btn btn-outline-light"><svg><use href="#i-phone"/></svg> Call Now</a>
+        <a href="https://wa.me/916383940823?text=Hello%20AVR%20Estates%2C%20I%20would%20like%20to%20know%20more%20about%20your%20residential%20plots.%20Please%20share%20the%20details." target="_blank" rel="noopener" class="btn btn-whatsapp"><svg><use href="#i-whatsapp"/></svg> WhatsApp</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item flex" style="gap:10px;align-items:center;"><svg style="width:22px;height:22px;color:var(--gold-300)"><use href="#i-ruler"/></svg><div><span class="num" style="font-size:1rem;">1200–2000 Sq.Ft</span><span class="label">Plot Options</span></div></div>
+        <div class="hero-meta-item flex" style="gap:10px;align-items:center;"><svg style="width:22px;height:22px;color:var(--gold-300)"><use href="#i-road"/></svg><div><span class="num" style="font-size:1rem;">32-Ft</span><span class="label">Wide Roads</span></div></div>
+        <div class="hero-meta-item flex" style="gap:10px;align-items:center;"><svg style="width:22px;height:22px;color:var(--gold-300)"><use href="#i-pin"/></svg><div><span class="num" style="font-size:1rem;">Kamalapuram</span><span class="label">Koothanallur, Tamil Nadu</span></div></div>
+      </div>
+    </div>
+    <div class="hero-art reveal is-visible">
+      <div class="hero-art-frame">
+        <img src="images/site-plan-illustration.svg" alt="Illustrative site layout plan of Vasantham Nagar residential plots">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<div class="trust-bar">
+  <div class="container trust-bar">
+    <div class="trust-item"><svg><use href="#i-shield-check"/></svg> DTCP Approved</div>
+    <div class="trust-item"><svg><use href="#i-doc"/></svg> RERA Registered</div>
+    <div class="trust-item"><svg><use href="#i-pin"/></svg> Prime Location, Kamalapuram</div>
+    <div class="trust-item"><svg><use href="#i-shield"/></svg> Transparent Documentation</div>
+  </div>
+</div>
+
+<!-- ============ ABOUT PREVIEW ============ -->
+<section class="section bg-ivory">
+  <div class="container two-col">
+    <div class="reveal">
+      <div class="section-eyebrow">About AVR Estates</div>
+      <h2>A Developer Built on Trust, Transparency and Timely Delivery</h2>
+      <p class="lede" style="margin-top:18px;">AVR Estates specialises in residential plots and property development, guiding every customer from enquiry to registration with clear documentation and honest communication. Our approach is simple — do right by the buyer, at every step.</p>
+      <a href="about.html" class="btn btn-outline-dark" style="margin-top:28px;">Learn More About Us <svg><use href="#i-arrow-right"/></svg></a>
+    </div>
+    <div class="reveal">
+      <div class="feature-grid" style="grid-template-columns:1fr;gap:18px;">
+        <div class="feature-card" style="display:flex;align-items:flex-start;gap:18px;padding:24px;">
+          <div class="feature-icon" style="margin-bottom:0;flex-shrink:0;"><svg><use href="#i-shield-check"/></svg></div>
+          <div><h4>Trust &amp; Transparency</h4><p style="margin-top:4px;">DTCP and RERA approvals with clear, verifiable documentation on every layout.</p></div>
+        </div>
+        <div class="feature-card" style="display:flex;align-items:flex-start;gap:18px;padding:24px;">
+          <div class="feature-icon" style="margin-bottom:0;flex-shrink:0;"><svg><use href="#i-clock"/></svg></div>
+          <div><h4>Timely Process</h4><p style="margin-top:4px;">Structured site visits, plot selection and registration handled without delay.</p></div>
+        </div>
+        <div class="feature-card" style="display:flex;align-items:flex-start;gap:18px;padding:24px;">
+          <div class="feature-icon" style="margin-bottom:0;flex-shrink:0;"><svg><use href="#i-users"/></svg></div>
+          <div><h4>Customer-First</h4><p style="margin-top:4px;">A dedicated team available on call and WhatsApp to answer every question.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PROJECT ============ -->
+<section class="section bg-beige" id="project">
+  <div class="container">
+    <div class="section-heading center reveal">
+      <div class="section-eyebrow" style="justify-content:center;">Our Project</div>
+      <h2>Vasantham Nagar, Kamalapuram</h2>
+      <p>A thoughtfully planned residential layout offering flexible plot sizes, wide roads and essential infrastructure — approved and ready for the families who will call it home.</p>
+    </div>
+    <div class="divider-gold center-divider"></div>
+    <div style="max-width:620px;margin:48px auto 0;">
+      <div class="project-card reveal">
+        <div class="project-card-media">
+          <img class="project-photo" src="images/vasantham-nagar-entrance.jpg" alt="Vasantham Nagar entrance arch, Kamalapuram">
+          <span class="project-card-badge">Residential Plots</span>
+        </div>
+        <div class="project-card-body">
+          <h3>Vasantham Nagar</h3>
+          <p class="project-price">DTCP &amp; RERA Approved</p>
+          <div class="project-facts">
+            <div class="project-fact"><svg><use href="#i-pin"/></svg> Kamalapuram, near Koothanallur, Tamil Nadu</div>
+            <div class="project-fact"><svg><use href="#i-ruler"/></svg> 1200, 1500, 1800 &amp; 2000 Sq.Ft Plot Options</div>
+            <div class="project-fact"><svg><use href="#i-road"/></svg> 32-Feet Black-top Roads</div>
+            <div class="project-fact"><svg><use href="#i-shield"/></svg> Drinking Water, Electricity, Street Lighting &amp; Security</div>
+          </div>
+          <div class="project-card-actions">
+            <a href="vasantham-nagar.html#enquiry" class="btn btn-outline-dark">Book a Site Visit</a>
+            <a href="vasantham-nagar.html" class="btn btn-navy">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AMENITIES PREVIEW ============ -->
+<section class="section bg-navy-gradient blueprint-bg on-dark">
+  <div class="container">
+    <div class="section-heading center reveal">
+      <div class="section-eyebrow" style="justify-content:center;">Infrastructure</div>
+      <h2>Thoughtful Infrastructure, Built In</h2>
+      <p>Every plot at Vasantham Nagar is supported by essential civic infrastructure from day one.</p>
+    </div>
+    <div class="amenity-grid" style="margin-top:52px;">
+      <div class="amenity-card reveal" style="background:rgba(255,255,255,0.03);border-color:rgba(228,201,137,0.18);">
+        <div class="amenity-icon"><svg><use href="#i-road"/></svg></div>
+        <div><h4 style="color:var(--ivory-100);">32-Feet Roads</h4><p style="color:rgba(251,249,244,0.65);">Wide black-top roads throughout the layout.</p></div>
+      </div>
+      <div class="amenity-card reveal" style="background:rgba(255,255,255,0.03);border-color:rgba(228,201,137,0.18);">
+        <div class="amenity-icon"><svg><use href="#i-water"/></svg></div>
+        <div><h4 style="color:var(--ivory-100);">Drinking Water</h4><p style="color:rgba(251,249,244,0.65);">Reliable water supply provisioned to every plot.</p></div>
+      </div>
+      <div class="amenity-card reveal" style="background:rgba(255,255,255,0.03);border-color:rgba(228,201,137,0.18);">
+        <div class="amenity-icon"><svg><use href="#i-bolt"/></svg></div>
+        <div><h4 style="color:var(--ivory-100);">Electricity</h4><p style="color:rgba(251,249,244,0.65);">Underground-ready electrical infrastructure.</p></div>
+      </div>
+      <div class="amenity-card reveal" style="background:rgba(255,255,255,0.03);border-color:rgba(228,201,137,0.18);">
+        <div class="amenity-icon"><svg><use href="#i-lamp"/></svg></div>
+        <div><h4 style="color:var(--ivory-100);">Street Lighting</h4><p style="color:rgba(251,249,244,0.65);">Well-lit streets across the entire layout.</p></div>
+      </div>
+      <div class="amenity-card reveal" style="background:rgba(255,255,255,0.03);border-color:rgba(228,201,137,0.18);">
+        <div class="amenity-icon"><svg><use href="#i-shield"/></svg></div>
+        <div><h4 style="color:var(--ivory-100);">Security</h4><p style="color:rgba(251,249,244,0.65);">Layout-wide security facilities for peace of mind.</p></div>
+      </div>
+      <div class="amenity-card reveal" style="background:rgba(255,255,255,0.03);border-color:rgba(228,201,137,0.18);">
+        <div class="amenity-icon"><svg><use href="#i-doc"/></svg></div>
+        <div><h4 style="color:var(--ivory-100);">DTCP &amp; RERA</h4><p style="color:rgba(251,249,244,0.65);">Fully approved documentation, ready to register.</p></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px;">
+      <a href="amenities.html" class="btn btn-outline-light">View All Amenities <svg><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section bg-ivory">
+  <div class="container">
+    <div class="section-heading center reveal">
+      <div class="section-eyebrow" style="justify-content:center;">The Process</div>
+      <h2>How to Own Your Plot</h2>
+      <p>A clear, guided path from first enquiry to registered ownership.</p>
+    </div>
+    <div class="process-grid" style="margin-top:56px;">
+      <div class="process-step reveal">
+        <div class="process-num" style="background:var(--gold-500);">1</div>
+        <h4 style="color:var(--navy-900);">Enquire &amp; Connect</h4>
+        <p style="color:var(--text-muted);">Reach us by call, WhatsApp or the enquiry form and share your requirement.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num" style="background:var(--gold-500);">2</div>
+        <h4 style="color:var(--navy-900);">Schedule a Site Visit</h4>
+        <p style="color:var(--text-muted);">Walk the layout with our team and see the plots and infrastructure in person.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num" style="background:var(--gold-500);">3</div>
+        <h4 style="color:var(--navy-900);">Select Your Plot</h4>
+        <p style="color:var(--text-muted);">Choose your preferred size and position with guidance from our advisors.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num" style="background:var(--gold-500);">4</div>
+        <h4 style="color:var(--navy-900);">Documentation &amp; Registration</h4>
+        <p style="color:var(--text-muted);">Complete verified paperwork and registration with full transparency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="cta-band bg-navy-gradient blueprint-bg">
+  <div class="container reveal">
+    <div class="section-eyebrow" style="justify-content:center;">Start Today</div>
+    <h2>Your Dream Home Starts with the Right Plot.</h2>
+    <p>Speak with the AVR Estates team and take the first step toward owning a DTCP &amp; RERA approved plot at Vasantham Nagar.</p>
+    <div class="cta-band-actions">
+      <a href="vasantham-nagar.html#enquiry" class="btn btn-gold">Enquire <svg><use href="#i-arrow-right"/></svg></a>
+      <a href="tel:+916383940823" class="btn btn-outline-light"><svg><use href="#i-phone"/></svg> Call AVR Estates</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/avr-logo.png" alt="AVR Estates logo">
+        <p class="tagline">Your Property. Our Priority.</p>
+        <p class="desc">Premium residential plots and property development, guided by trust, transparency and timely delivery.</p>
+        <div class="social-row">
+          <a href="#" aria-label="AVR Estates on Facebook (coming soon)"><svg><use href="#i-facebook"/></svg></a>
+          <a href="#" aria-label="AVR Estates on Instagram (coming soon)"><svg><use href="#i-instagram"/></svg></a>
+          <a href="#" aria-label="AVR Estates on LinkedIn (coming soon)"><svg><use href="#i-linkedin"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="vasantham-nagar.html">Vasantham Nagar</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><svg><use href="#i-phone"/></svg> <a href="tel:+918072518104">+91 80725 18104</a></div>
+        <div class="footer-contact-item"><svg><use href="#i-phone"/></svg> <a href="tel:+919842296971">+91 98422 96971</a></div>
+        <div class="footer-contact-item"><svg><use href="#i-mail"/></svg> <a href="mailto:avrestatesofficial@gmail.com">avrestatesofficial@gmail.com</a></div>
+      </div>
+      <div class="footer-col">
+        <h4>Location</h4>
+        <div class="footer-contact-item"><svg><use href="#i-pin"/></svg> <span>Koothanallur, Tamil Nadu, India</span></div>
+        <a href="location.html" class="btn btn-outline-light btn-sm" style="margin-top:8px;">View on Map</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> AVR Estates. All rights reserved.</span>
+      <span>Designed for a premium residential plotting experience.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a class="whatsapp-float" href="https://wa.me/916383940823?text=Hello%20AVR%20Estates%2C%20I%20would%20like%20to%20know%20more%20about%20your%20residential%20plots.%20Please%20share%20the%20details." target="_blank" rel="noopener" aria-label="Chat with AVR Estates on WhatsApp">
+  <span class="ping"></span>
+  <svg><use href="#i-whatsapp"/></svg>
+</a>
+
+<!-- ============ MOBILE ACTION BAR ============ -->
+<nav class="mobile-action-bar">
+  <a href="tel:+916383940823"><svg><use href="#i-phone"/></svg> Call</a>
+  <a href="https://wa.me/916383940823?text=Hello%20AVR%20Estates%2C%20I%20would%20like%20to%20know%20more%20about%20your%20residential%20plots.%20Please%20share%20the%20details." target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg> WhatsApp</a>
+  <a href="vasantham-nagar.html#enquiry" class="enquire-cta"><svg><use href="#i-mail"/></svg> Enquire</a>
+</nav>
+
+<script src="js/main.js"></script>
+</body>
+</html>
